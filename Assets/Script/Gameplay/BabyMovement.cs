@@ -7,18 +7,14 @@ public class BabyMovement : MonoBehaviour
 
     [SerializeField] InputActionManager inputActions = null;
     [SerializeField] float speed = 1.0f;
+    [SerializeField] float rotationSpeed = 1.0f;
 
     private Vector3 moveInput = Vector3.zero;
-    Vector3 initialPosition; // We cache the intiial position. Useful for reset !
-
-    //DIRECTION inputState = DIRECTION.NONE;
-
 
     private void Start()
     {
-        initialPosition = transform.position;
+        // Subscribe to Axis change events
         inputActions.RegisterToAxisEvents(Axis_Listener);
-        enabled = false; // car controllers are disabled by default. The RaceManager will give them the signal !
     }
 
     // Update is called once per frame
@@ -26,15 +22,23 @@ public class BabyMovement : MonoBehaviour
     {
 
         IInputAction<Vector2> axes = inputActions.GetAxisData();
+
         moveInput.x = axes.GetValue().Value.x * Time.deltaTime * speed;
 
         moveInput.y = axes.GetValue().Value.y * Time.deltaTime * speed;
 
-        //moveInput.Normalize();
-
         move(moveInput);
 
-        //Debug.Log("New Axis value: (" + x_axis + ", " + y_axis + ")");
+        rotate(moveInput);
+    }
+
+    private void rotate(Vector3 i_movement)
+    {
+        moveInput.Normalize();
+
+        Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, i_movement);
+
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
     }
 
 

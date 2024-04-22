@@ -205,7 +205,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.90188676, g: 0.8637012, b: 0.58367383, a: 0}
+  m_BackGroundColor: {r: 0.94716984, g: 0.94716984, b: 0.94716984, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -299,7 +299,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numOfColumns: 8
   numOfRows: 10
-  babyTransform: {fileID: 1185229253}
   x_space: 4
   y_space: 5
   columns_left: 3
@@ -307,6 +306,7 @@ MonoBehaviour:
   empty_seat_prefab: {fileID: 9154384569892194917, guid: a80322eec735ff94f87b452161740dbb, type: 3}
   occupied_seat_prefab: {fileID: 2036851126379725956, guid: 858ebe9c5ca0bda4d8997e1a91a9be5d, type: 3}
   empty_to_occupied_ratio: 3
+  babyOffset: -14
 --- !u!4 &672226874
 Transform:
   m_ObjectHideFlags: 0

@@ -101,6 +101,12 @@ public class InputActionManager : MonoBehaviour, IInputManager
         //onButtonEvent += i_buttonCallback;
         onAxisEvent += i_axisCallback;
     }
+    public void RegisterToButtonEvents(ButtonEvent i_buttonCallback)
+    {
+        // This is how we register callbacks to events. 
+        //onButtonEvent += i_buttonCallback;
+        onButtonEvent += i_buttonCallback;
+    }
 
     #endregion
 

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CollisionScript : MonoBehaviour
 {
-    // Start is called before the first frame update
     [SerializeField] float annoyance_inc = 1f;
+    // Start is called before the first frame update
     void Start()
     {
 
@@ -21,13 +21,16 @@ public class CollisionScript : MonoBehaviour
     {
         var collidedObject = collision.gameObject;
 
+        // Get the Passenger Script
         var collidedObjectScript = collidedObject.GetComponent<passenger>();
 
         if (collidedObjectScript != null)
         {
+            // Increase annoyance of passenger
             collidedObjectScript.increase_annoyance(annoyance_inc);
         }
 
+        // Ignore collisions with the Baby (the player)
         if (collidedObject.name != "Baby")
         {
             Debug.Log($"Collided with {collidedObject.name}");

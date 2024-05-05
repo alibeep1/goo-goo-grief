@@ -34,15 +34,18 @@ public class AnnoyingMoves : MonoBehaviour
     {
         Vector2 rayOrigin = transform.position + Vector3.up * 1.4f;
         Debug.Log($"rayOrigin: {rayOrigin}");
-        //RaycastHit2D hit = Physics2D.Raycast(rayOrigin, transform.up);
+
+
+        // Instantiate the Pee prefab
         GameObject missileObject = Instantiate(missilePrefab, transform.position, Quaternion.identity);
+
         Rigidbody2D missile = missileObject.GetComponent<Rigidbody2D>();
-        
+
         Vector2 direction = transform.up.normalized;
 
         if (missile != null)
         {
-            //missile.tag = "pee";
+            // Launch the Pee object as a missile in the direction of the baby's rotation and the given speed
             missile.AddForce(direction * missileSpeed, ForceMode2D.Impulse);
         }
 

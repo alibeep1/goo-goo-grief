@@ -25,15 +25,8 @@ public class passenger : MonoBehaviour
         if (inc > 0)
         {
             float new_curr_annoyance = curr_annoyance + inc;
-            curr_annoyance = Math.Clamp(new_curr_annoyance, 0, annoyance_ceil);
-            //curr_annoyance = Mathf.Min(new_curr_annoyance, curr_annoyance);
 
-            //curr_annoyance = 1 + curr_annoyance * percent_inc;
-            //if (curr_annoyance > annoyance_ceil)
-            //{
-            //    curr_annoyance = annoyance_ceil;
-            //}
-            //curr_annoyance = percent_inc * annoyance_ceil;
+            curr_annoyance = Math.Clamp(new_curr_annoyance, 0, annoyance_ceil);
         }
         Debug.Log($"New Annoyance: {curr_annoyance}");
     }

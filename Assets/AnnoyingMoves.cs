@@ -11,6 +11,7 @@ public class AnnoyingMoves : MonoBehaviour
 
     [SerializeField] GameObject missilePrefab = null;
     [SerializeField] float missileSpeed = 0.7f;
+    [SerializeField] ProgressBar prog;
 
 
     // Start is called before the first frame update
@@ -48,7 +49,7 @@ public class AnnoyingMoves : MonoBehaviour
             // Launch the Pee object as a missile in the direction of the baby's rotation and the given speed
             missile.AddForce(direction * missileSpeed, ForceMode2D.Impulse);
         }
-
+        prog.IncProgressBar(0.05f);
 
     }
 

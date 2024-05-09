@@ -5,6 +5,7 @@ using UnityEngine;
 public class CollisionScript : MonoBehaviour
 {
     [SerializeField] float annoyance_inc = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,15 @@ public class CollisionScript : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         var collidedObject = collision.gameObject;
+        var collider = collision.collider;
 
+        Debug.Log($"Collided with {collidedObject.name}");
+
+        if (collidedObject.name == "Baby" && collider is CircleCollider2D)
+        {
+            Debug.Log("Collided with baby's circle collider...");
+            return;
+        }
         // Get the Passenger Script
         var collidedObjectScript = collidedObject.GetComponent<passenger>();
 
@@ -34,7 +43,7 @@ public class CollisionScript : MonoBehaviour
         if (collidedObject.name != "Baby")
         {
             Debug.Log($"Collided with {collidedObject.name}");
-            
+
             Destroy(gameObject, 1f);
         }
 

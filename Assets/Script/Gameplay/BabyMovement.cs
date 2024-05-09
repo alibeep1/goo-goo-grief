@@ -49,4 +49,18 @@ public class BabyMovement : MonoBehaviour
         position += i_deltaPosition;
         transform.position = position;
     }
+
+    //void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    var collidedObject = collision.gameObject;
+    //    var collider = collision.collider;
+
+    //    Debug.Log($"Baby collided with {collidedObject.name}");
+
+    //    if (collidedObject.name == "occupied_seat(Clone)" && collider is CircleCollider2D)
+    //    {
+    //        Debug.Log("Collided with baby's circle collider...");
+    //        return;
+    //    }
+    //}
 }

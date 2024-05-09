@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 9055621535503714926}
   - component: {fileID: 8224475116185505199}
+  - component: {fileID: 8288076087768136012}
   - component: {fileID: 6311189736853938129}
   - component: {fileID: 3913531742264161178}
-  - component: {fileID: 8288076087768136012}
   - component: {fileID: 6749876850810532479}
+  - component: {fileID: 3148101168133117934}
   m_Layer: 0
   m_Name: occupied_seat
   m_TagString: Untagged
@@ -88,6 +89,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &8288076087768136012
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036851126379725956}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 12
 --- !u!61 &6311189736853938129
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -101,7 +118,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04874164, y: -0.00000023841858}
+  m_Offset: {x: 0.04874158, y: -0.28663003}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -112,7 +129,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.0244336, y: 3.1294036}
+  m_Size: {x: 4.0244336, y: 2.556144}
   m_EdgeRadius: 0
 --- !u!50 &3913531742264161178
 Rigidbody2D:
@@ -135,22 +152,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &8288076087768136012
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036851126379725956}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 2.195
 --- !u!114 &6749876850810532479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,3 +164,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c24192a7e6de2614287e7435ced7e555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  annoyance_ceil: 10
+  curr_annoyance: 1
+--- !u!114 &3148101168133117934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036851126379725956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e35b4671c3b5e246978ccdd01c3be36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meterPrefab: {fileID: 4974257830586006399, guid: d1d306c4969f13d4ca0593939cc6692d, type: 3}
+  seatTransform: {fileID: 9055621535503714926}

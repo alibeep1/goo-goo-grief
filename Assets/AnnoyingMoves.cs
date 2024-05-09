@@ -43,7 +43,7 @@ public class AnnoyingMoves : MonoBehaviour
         if (i_keyCode == KeyCode.F)
         {
             Fart_handler();
-            Debug.Log("Byeee");
+            //Debug.Log("Byeee");
         }
     }
 
@@ -65,7 +65,7 @@ public class AnnoyingMoves : MonoBehaviour
             // Launch the Pee object as a missile in the direction of the baby's rotation and the given speed
             missile.AddForce(direction * missileSpeed, ForceMode2D.Impulse);
         }
-        prog.IncProgressBar(0.05f);
+        //prog.IncProgressBar(0.05f);
 
     }
 

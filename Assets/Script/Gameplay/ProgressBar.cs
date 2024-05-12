@@ -16,7 +16,7 @@ public class ProgressBar : MonoBehaviour
     void Update()
     {
         if (slider.value < progress){
-            slider.value = slider.value + fillSpeed;
+            slider.value = slider.value + fillSpeed * Time.deltaTime;
      }   
     }
 

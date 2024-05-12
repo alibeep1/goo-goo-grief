@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3913531742264161178}
   - component: {fileID: 6749876850810532479}
   - component: {fileID: 3148101168133117934}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: occupied_seat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3744817786282866131}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: visualObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3164050430845803227}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CollisionHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2759158246705057048}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PassengerHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,7 +287,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1403788346473098351}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}

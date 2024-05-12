@@ -1,5 +1,71 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1652098439
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1652098440}
+  - component: {fileID: 1652098442}
+  - component: {fileID: 1652098441}
+  m_Layer: 6
+  m_Name: AnnoyanceMechanism
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1652098440
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652098439}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: -10}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5351442183117850869}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1652098442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652098439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29dd5c0cb7a584fbc9459464b41d0234, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputActions: {fileID: 0}
+  pee_distance: 20
+  missilePrefab: {fileID: 1977841194866254065, guid: 5891508cd46629a4ebaf591a7b25eea9, type: 3}
+  missileSpeed: 8
+  prog: {fileID: 0}
+--- !u!114 &1652098441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652098439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e95220b446bb4edeac9d54c3376d7be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particlesystem: {fileID: 0}
+  inputActions: {fileID: 0}
+  fartEnable: 1
+  prog: {fileID: 0}
 --- !u!1 &5351442183117850867
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,7 +79,9 @@ GameObject:
   - component: {fileID: 7433978290725556996}
   - component: {fileID: 1185229254}
   - component: {fileID: 1185229257}
-  m_Layer: 0
+  - component: {fileID: 1816888297}
+  - component: {fileID: 1816888298}
+  m_Layer: 7
   m_Name: Baby
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -33,6 +101,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3172806278609071807}
+  - {fileID: 1652098440}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -105,7 +174,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5351442183117850867}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7056e75a4e0238045a0b7413787e5a2d, type: 3}
   m_Name: 
@@ -118,6 +187,39 @@ MonoBehaviour:
   missileSpeed: 8
   fartEnable: 1
   prog: {fileID: 0}
+--- !u!114 &1816888297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5351442183117850867}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29dd5c0cb7a584fbc9459464b41d0234, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputActions: {fileID: 0}
+  pee_distance: 20
+  missilePrefab: {fileID: 1977841194866254065, guid: 3d55d21dca05feb48975fc6baa1213e3, type: 3}
+  missileSpeed: 8
+  prog: {fileID: 0}
+--- !u!114 &1816888298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5351442183117850867}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e95220b446bb4edeac9d54c3376d7be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particlesystem: {fileID: 0}
+  inputActions: {fileID: 0}
+  fartEnable: 1
+  prog: {fileID: 0}
 --- !u!1 &6272577047754541785
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,7 +230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3172806278609071807}
   - component: {fileID: 7729273954165052314}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

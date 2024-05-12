@@ -12,9 +12,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - MechanicsLayer
+  - SpriteBabyLayer
+  - GridManagerLayer
   - 
   - 
   - 
@@ -41,4 +41,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: MechanicsLayer
+    uniqueID: 3517812113
     locked: 0

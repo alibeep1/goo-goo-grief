@@ -239,8 +239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 404715982}
   - component: {fileID: 404715981}
-  - component: {fileID: 404715983}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BabyManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,26 +274,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &404715983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 404715980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7056e75a4e0238045a0b7413787e5a2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particlesystem: {fileID: 2020220714}
-  sr: {fileID: 1187232807}
-  inputActions: {fileID: 0}
-  pee_distance: 20
-  missilePrefab: {fileID: 0}
-  missileSpeed: 0.7
-  fartEnable: 1
-  prog: {fileID: 0}
 --- !u!1 &436095507
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,7 +528,7 @@ GameObject:
   m_Component:
   - component: {fileID: 672226874}
   - component: {fileID: 672226873}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -677,11 +656,6 @@ CanvasRenderer:
 --- !u!4 &1185229253 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5351442183117850869, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
-  m_PrefabInstance: {fileID: 5351442182138159408}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &1187232807 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 7729273954165052314, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
   m_PrefabInstance: {fileID: 5351442182138159408}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1212121932
@@ -5760,6 +5734,46 @@ PrefabInstance:
       propertyPath: particlesystem
       value: 
       objectReference: {fileID: 2020220714}
+    - target: {fileID: 1652098441, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
+      propertyPath: prog
+      value: 
+      objectReference: {fileID: 385721515}
+    - target: {fileID: 1652098441, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
+      propertyPath: inputActions
+      value: 
+      objectReference: {fileID: 404715981}
+    - target: {fileID: 1652098441, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
+      propertyPath: particlesystem
+      value: 
+      objectReference: {fileID: 2020220714}
+    - target: {fileID: 1652098442, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
+      propertyPath: prog
+      value: 
+      objectReference: {fileID: 385721515}
+    - target: {fileID: 1652098442, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
+      propertyPath: inputActions
+      value: 
+      objectReference: {fileID: 404715981}
+    - target: {fileID: 1816888297, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
+      propertyPath: prog
+      value: 
+      objectReference: {fileID: 385721515}
+    - target: {fileID: 1816888297, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
+      propertyPath: inputActions
+      value: 
+      objectReference: {fileID: 404715981}
+    - target: {fileID: 1816888298, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
+      propertyPath: prog
+      value: 
+      objectReference: {fileID: 385721515}
+    - target: {fileID: 1816888298, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
+      propertyPath: inputActions
+      value: 
+      objectReference: {fileID: 404715981}
+    - target: {fileID: 1816888298, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
+      propertyPath: particlesystem
+      value: 
+      objectReference: {fileID: 2020220714}
     - target: {fileID: 5351442183117850867, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
       propertyPath: m_Name
       value: Baby
@@ -5808,5 +5822,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1816888297, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
+    - {fileID: 1816888298, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
+    - {fileID: 1185229257, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}

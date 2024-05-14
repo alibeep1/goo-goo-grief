@@ -8,6 +8,7 @@ public class passenger : MonoBehaviour
 {
     [SerializeField] float annoyance_ceil = 10.0f;
     [SerializeField] float curr_annoyance = 1f;
+    [SerializeField] float fart_inc= 0.01f;
     [SerializeField] ProgressBar prog;
 
 
@@ -34,14 +35,24 @@ public class passenger : MonoBehaviour
             prog.IncProgressBar(inc);
 
             curr_annoyance = Math.Clamp(new_curr_annoyance, 0, annoyance_ceil);
+            Debug.Log($"New Annoyance: {curr_annoyance}");
         }
-        Debug.Log($"New Annoyance: {curr_annoyance}");
     }
 
- 
+    private void OnParticleCollision(GameObject particle)
+    {
+        //var collidedObject = particle.gameObject;
+        increase_annoyance(fart_inc);
+        prog.IncProgressBar(fart_inc);
+        Debug.Log($"passenger -> Collided with fart object");
+    }
+
+
+    // Is called when the baby collides with the circular collider of a passenger
+    // Handle showing the passenger meter / exclamation mark here
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log($"TRIGGERED ");
+        //Debug.Log($"TRIGGERED ");
         var collidedObject = collision.gameObject;
         //var collider = collision.collider;
 
@@ -49,7 +60,7 @@ public class passenger : MonoBehaviour
         //Debug.Log($"collidedObject.tag: {collidedObject.tag}, collision: {collision.name}");
         if (collidedObject.tag == "Player")
         {
-            Debug.Log("PASSENGER with baby's circle collider...");
+            Debug.Log("PASSENGER CIRCLE COLLIDER with baby's CIRCLE collider...");
             //return;
         }
     }

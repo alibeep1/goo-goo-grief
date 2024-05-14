@@ -25,11 +25,7 @@ public class CollisionScript : MonoBehaviour
 
         Debug.Log($"Pee -> Collided with {collidedObject.name}");
 
-        //if (collidedObject.name == "Baby" && collider is CircleCollider2D)
-        //{
-        //    Debug.Log("Collided with baby's circle collider...");
-        //    return;
-        //}
+       
         // Get the Passenger Script
         var collidedObjectScript = collidedObject.GetComponent<passenger>();
 

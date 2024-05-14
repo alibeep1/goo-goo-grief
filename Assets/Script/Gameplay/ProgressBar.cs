@@ -16,12 +16,13 @@ public class ProgressBar : MonoBehaviour
     void Update()
     {
         if (slider.value < progress){
-            slider.value = slider.value + fillSpeed * Time.deltaTime;
+            slider.value = slider.value + fillSpeed;
      }   
     }
 
     public void IncProgressBar(float Value)
     {
         progress = slider.value + Value;
+        Debug.Log($"New Progress bar: {progress}");
     }
 }

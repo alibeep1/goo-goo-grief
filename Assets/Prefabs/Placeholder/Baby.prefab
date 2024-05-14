@@ -78,9 +78,8 @@ GameObject:
   - component: {fileID: 2743964047887135151}
   - component: {fileID: 7433978290725556996}
   - component: {fileID: 1185229254}
-  - component: {fileID: 1185229257}
-  - component: {fileID: 1816888297}
-  - component: {fileID: 1816888298}
+  - component: {fileID: 4014908498479455676}
+  - component: {fileID: 696549931320959597}
   m_Layer: 7
   m_Name: Baby
   m_TagString: Player
@@ -167,58 +166,38 @@ MonoBehaviour:
   inputActions: {fileID: 0}
   speed: 4
   rotationSpeed: 720
---- !u!114 &1185229257
+--- !u!114 &4014908498479455676
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5351442183117850867}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7056e75a4e0238045a0b7413787e5a2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particlesystem: {fileID: 0}
-  sr: {fileID: 7729273954165052314}
-  inputActions: {fileID: 0}
-  pee_distance: 20
-  missilePrefab: {fileID: 1977841194866254065, guid: 3d55d21dca05feb48975fc6baa1213e3, type: 3}
-  missileSpeed: 8
-  fartEnable: 1
-  prog: {fileID: 0}
---- !u!114 &1816888297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5351442183117850867}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29dd5c0cb7a584fbc9459464b41d0234, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputActions: {fileID: 0}
-  pee_distance: 20
-  missilePrefab: {fileID: 1977841194866254065, guid: 3d55d21dca05feb48975fc6baa1213e3, type: 3}
-  missileSpeed: 8
-  prog: {fileID: 0}
---- !u!114 &1816888298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5351442183117850867}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e95220b446bb4edeac9d54c3376d7be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   particlesystem: {fileID: 0}
   inputActions: {fileID: 0}
-  fartEnable: 1
+  fartEnable: 0
+  prog: {fileID: 0}
+--- !u!114 &696549931320959597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5351442183117850867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29dd5c0cb7a584fbc9459464b41d0234, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputActions: {fileID: 0}
+  pee_distance: 20
+  missilePrefab: {fileID: 0}
+  missileSpeed: 0.7
   prog: {fileID: 0}
 --- !u!1 &6272577047754541785
 GameObject:

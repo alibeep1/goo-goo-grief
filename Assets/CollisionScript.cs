@@ -23,13 +23,13 @@ public class CollisionScript : MonoBehaviour
         var collidedObject = collision.gameObject;
         var collider = collision.collider;
 
-        Debug.Log($"Collided with {collidedObject.name}");
+        Debug.Log($"Pee -> Collided with {collidedObject.name}");
 
-        if (collidedObject.name == "Baby" && collider is CircleCollider2D)
-        {
-            Debug.Log("Collided with baby's circle collider...");
-            return;
-        }
+        //if (collidedObject.name == "Baby" && collider is CircleCollider2D)
+        //{
+        //    Debug.Log("Collided with baby's circle collider...");
+        //    return;
+        //}
         // Get the Passenger Script
         var collidedObjectScript = collidedObject.GetComponent<passenger>();
 

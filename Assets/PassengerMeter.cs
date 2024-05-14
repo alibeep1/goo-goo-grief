@@ -24,6 +24,7 @@ public class PassengerMeter : MonoBehaviour
     public void IncProgressBar(float Value)
     {
         progress = slider.value + Value;
+        //Debug.Log("PassengerMeter -> IncProgressBar CALLED\n new prog ", progress);
     }
 }
 

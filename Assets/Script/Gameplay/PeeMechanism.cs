@@ -10,7 +10,7 @@ public class PeeMechanism : MonoBehaviour
 
     [SerializeField] GameObject missilePrefab = null;
     [SerializeField] float missileSpeed = 0.7f;
-    [SerializeField] ProgressBar prog;
+    [SerializeField] ProgressBar prog = null;
 
     private void Start()
     {
@@ -45,7 +45,7 @@ public class PeeMechanism : MonoBehaviour
             // Launch the Pee object as a missile in the direction of the baby's rotation and the given speed
             missile.AddForce(direction * missileSpeed, ForceMode2D.Impulse);
         }
-        prog.IncProgressBar(0.05f);
+        //prog.IncProgressBar(0.05f);
 
     }
 }

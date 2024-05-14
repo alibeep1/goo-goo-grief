@@ -5722,18 +5722,6 @@ PrefabInstance:
       propertyPath: inputActions
       value: 
       objectReference: {fileID: 404715981}
-    - target: {fileID: 1185229257, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
-      propertyPath: prog
-      value: 
-      objectReference: {fileID: 385721515}
-    - target: {fileID: 1185229257, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
-      propertyPath: inputActions
-      value: 
-      objectReference: {fileID: 404715981}
-    - target: {fileID: 1185229257, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
-      propertyPath: particlesystem
-      value: 
-      objectReference: {fileID: 2020220714}
     - target: {fileID: 1652098441, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
       propertyPath: prog
       value: 
@@ -5754,26 +5742,6 @@ PrefabInstance:
       propertyPath: inputActions
       value: 
       objectReference: {fileID: 404715981}
-    - target: {fileID: 1816888297, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
-      propertyPath: prog
-      value: 
-      objectReference: {fileID: 385721515}
-    - target: {fileID: 1816888297, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
-      propertyPath: inputActions
-      value: 
-      objectReference: {fileID: 404715981}
-    - target: {fileID: 1816888298, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
-      propertyPath: prog
-      value: 
-      objectReference: {fileID: 385721515}
-    - target: {fileID: 1816888298, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
-      propertyPath: inputActions
-      value: 
-      objectReference: {fileID: 404715981}
-    - target: {fileID: 1816888298, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
-      propertyPath: particlesystem
-      value: 
-      objectReference: {fileID: 2020220714}
     - target: {fileID: 5351442183117850867, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
       propertyPath: m_Name
       value: Baby
@@ -5822,8 +5790,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1816888297, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
-    - {fileID: 1816888298, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
-    - {fileID: 1185229257, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 053921f842f335b4d908f03b6dc72b0c, type: 3}

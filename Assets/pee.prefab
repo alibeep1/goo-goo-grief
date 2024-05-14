@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2498217164031720266}
   - component: {fileID: 8882192382953436598}
   - component: {fileID: 2852145042031146484}
+  - component: {fileID: -3902606937256456019}
   m_Layer: 6
   m_Name: pee
   m_TagString: Untagged
@@ -133,3 +134,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &-3902606937256456019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977841194866254065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd6857309bff44e4c998ab7f3e2c93fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  annoyance_inc: 0.01

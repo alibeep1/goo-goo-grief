@@ -200,6 +200,7 @@ GameObject:
   - component: {fileID: 4974257830586006398}
   - component: {fileID: 4974257830586006396}
   - component: {fileID: 4974257830586006397}
+  - component: {fileID: 1676556234}
   m_Layer: 5
   m_Name: MomMeter
   m_TagString: Untagged
@@ -279,7 +280,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1676556234}
+        m_TargetAssemblyTypeName: Mom, Assembly-CSharp
+        m_MethodName: OnSliderChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4974257830586006397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,3 +307,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
   fillSpeed: 0.0001
+--- !u!114 &1676556234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4974257830586006399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c9ebfb0001e2438b80fa137e1ab440f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  babyInitialPosition: {x: 0, y: 0, z: 0}
+  babyPrefab: {fileID: 0}
+  meter_value: 0
+  aaway_distance_value: 10
+  gameover_screen: {fileID: 0}

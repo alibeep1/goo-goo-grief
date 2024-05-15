@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - progress_bar
+  - flight_attendant
+  - game_over
   layers:
   - Default
   - TransparentFX

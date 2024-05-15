@@ -10,6 +10,7 @@ public class GridManager : MonoBehaviour
     [SerializeField] int x_space, y_space;
     [SerializeField] int columns_left, columns_right = 1;
 
+    [SerializeField] GameObject mom_seat_prefab = null;
     [SerializeField] GameObject empty_seat_prefab = null;
     [SerializeField] GameObject occupied_seat_prefab = null;
 
@@ -29,7 +30,12 @@ public class GridManager : MonoBehaviour
                 {
                     if ((j < columns_left || j >= numOfColumns - columns_right) && i != 4)
                     {
-                        InstantiateSeat(j, i);
+                        if(i == 0 && j == 0)
+                        {
+                            Instantiate(mom_seat_prefab, new Vector3((x_space * j) + babyOffset, (y_space * i)), Quaternion.identity);
+                        } else{
+                            InstantiateSeat(j, i);
+                        }
                     }
 
                 }

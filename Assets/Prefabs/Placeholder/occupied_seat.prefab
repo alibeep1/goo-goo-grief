@@ -170,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   annoyance_ceil: 10
   curr_annoyance: 1
+  fart_inc: 0.01
   prog: {fileID: 0}
 --- !u!114 &3148101168133117934
 MonoBehaviour:
@@ -183,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e35b4671c3b5e246978ccdd01c3be36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meterPrefab: {fileID: 4974257830586006399, guid: d1d306c4969f13d4ca0593939cc6692d, type: 3}
+  meterPrefab: {fileID: 3301910999034749600, guid: fbb29e6bb66f640af990d0da8b066ab3, type: 3}
   seatTransform: {fileID: 9055621535503714926}
 --- !u!1 &3784784624565564083
 GameObject:

@@ -14,8 +14,26 @@ public class PeeMechanism : MonoBehaviour
     [SerializeField] float missileSpeed = 0.7f;
     [SerializeField] ProgressBar prog = null;
 
+    [SerializeField] AudioClip peeSound = null;
+    private AudioSource audioSource = null;
+
+    public void PlayPeeSound()
+    {
+        if (audioSource != null)
+        {
+
+            audioSource.PlayOneShot(peeSound);
+        }
+        else
+        {
+            Debug.Log("AudioSource IS NULL");
+        }
+    }
+
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         if (inputActions != null)
         {
             inputActions.RegisterToButtonEvents(Button_listener);
@@ -46,6 +64,7 @@ public class PeeMechanism : MonoBehaviour
         {
             // Launch the Pee object as a missile in the direction of the baby's rotation and the given speed
             missile.AddForce(direction * missileSpeed, ForceMode2D.Impulse);
+            PlayPeeSound();
             StartCoroutine(DestroyAfterDistance(missileObject, secondsAlive));
         }
 

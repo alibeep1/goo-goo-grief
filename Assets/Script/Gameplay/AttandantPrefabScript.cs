@@ -6,22 +6,40 @@ public class AttandantPrefabScript : MonoBehaviour
 {
     // [SerializeField] public bool FlightAttendantCollision;
     // [SerializeField] public GameObject flightAttendant;
-    private GameObject GameOverScreen = null;
+    //private GameObject GameOverScreen = null;
+    [SerializeField] GameOverScript gameOver = null;
 
-    void Awake()
+
+    void Start()
     {
-        GameOverScreen = GameObject.FindGameObjectWithTag("game_over");
+        GameObject gameOverObject = GameObject.FindGameObjectWithTag("game_over");
+        gameOver = gameOverObject.GetComponent<GameOverScript>();
+        if(gameOver == null)
+        {
+            Debug.Log("Gameover object is NULL");
+        }
         // GameOverScreen.SetActive(false);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         var collidedObject = collision.gameObject;
-        var collider = collision.collider;       
+        var collider = collision.collider;
 
-        Debug.Log("Baby is far from initial position!");
-        // GameOverScreen.SetActive(true);
-        Time.timeScale = 0;
+        Debug.Log("COLLIDED WITH BABYYYYY");
+        if (gameOver == null)
+        {
+            Debug.Log("Gameover object is NULL");
+        }
+        else
+        {
+            Debug.Log("FOUND GAMEOVER OBJECT");
+
+        }
+
+        gameOver.Gameover();
+        //gameoverscreen.setactive(true);
+        //Time.timeScale = 0;
     }
 
 

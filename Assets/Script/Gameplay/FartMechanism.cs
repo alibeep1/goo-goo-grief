@@ -11,8 +11,26 @@ public class FartMechanism : MonoBehaviour
     [SerializeField] ProgressBar prog;
     [SerializeField] float annoyance_inc = 0.01f;
 
+    [SerializeField] AudioClip fartSound = null;
+    private AudioSource audioSource = null;
+
+    public void PlayFartSound()
+    {
+        if (audioSource != null && fartEnable)
+        {
+
+            audioSource.PlayOneShot(fartSound);
+        }
+        else
+        {
+            Debug.Log("AudioSource IS NULL");
+        }
+    }
+
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         // If particlesystem reference is not assigned, try to get it from the GameObject
         if (particlesystem == null)
         {
@@ -63,6 +81,7 @@ public class FartMechanism : MonoBehaviour
         em.enabled = true;
         //prog.IncProgressBar(0.05f);
         Debug.Log($"Farted at {DateTime.Now}");
+        PlayFartSound();
         particlesystem.Play();
         StartCoroutine(BabyFartDuration(1.0f));
     }

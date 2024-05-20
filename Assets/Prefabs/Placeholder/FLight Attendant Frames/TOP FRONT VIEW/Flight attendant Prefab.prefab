@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7683377604799976880}
   - component: {fileID: 6372873695509612337}
-  - component: {fileID: -3706680990704713823}
+  - component: {fileID: 1101319583359346808}
   - component: {fileID: 8892008794306596372}
   - component: {fileID: -9053159368581888176}
   - component: {fileID: -4423353567102810841}
@@ -88,25 +88,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-3706680990704713823
-MonoBehaviour:
+--- !u!50 &1101319583359346808
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3074670061019980178}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fe2f5432d93c48f89e0e216e4c1e0ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flag: 0
-  enemyPrefab: {fileID: 3074670061019980178}
-  spawnPoint: {fileID: 0}
-  babyPrefab: {fileID: 0}
-  spawnInterval: 30
-  moveSpeed: 5
-  despawnY: 10
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &8892008794306596372
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -120,7 +122,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.038906693, y: 0.14914382}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -131,7 +133,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.7, y: 3.96}
+  m_Size: {x: 1.8959198, y: 3.6617124}
   m_EdgeRadius: 0
 --- !u!114 &-9053159368581888176
 MonoBehaviour:
@@ -145,6 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a193910e58dbb45e7a1e1989b9c64072, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOver: {fileID: 0}
 --- !u!95 &-4423353567102810841
 Animator:
   serializedVersion: 5

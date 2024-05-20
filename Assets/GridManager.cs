@@ -16,6 +16,7 @@ public class GridManager : MonoBehaviour
     [SerializeField] GameObject empty_seat_prefab = null;
     [SerializeField] GameObject occupied_seat_prefab = null;
     [SerializeField] GameObject aisle_handles = null;
+    [SerializeField] GameObject flight_attendant = null;
 
     [SerializeField] GameObject window_prefab = null;
     [SerializeField] GameObject seatbelt_prefab = null;

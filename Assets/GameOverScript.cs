@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameOverScript : MonoBehaviour
 {
     [SerializeField] GameTimer timer;
+    [SerializeField] Attendant attendant;
 
     private void Start()
     {
@@ -21,6 +23,12 @@ public class GameOverScript : MonoBehaviour
     }
     public void Gameover()
     {
+        Debug.Log("GAMEOVERRRRR");
         SceneManager.LoadScene("LoseMenu");
+    }
+    public void GameWon()
+    {
+        Debug.Log("YOU WON");
+        SceneManager.LoadScene("WinMenu");
     }
 }

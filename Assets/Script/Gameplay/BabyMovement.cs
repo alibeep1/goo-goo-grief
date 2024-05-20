@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BabyMovement : MonoBehaviour
@@ -17,15 +19,38 @@ public class BabyMovement : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-void Axis_Listener(IInputAction<Vector2> i_value)
-{
-    Vector2 axes = inputActions.GetAxisData().GetValue().Value;
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            animator.SetBool("isCrying", true);
+        }
 
-    //Debug.Log($"Axes: {axes}");
+        if (Input.GetKeyUp(KeyCode.C))
+        {
+            animator.SetBool("isCrying", false);
+        }
 
-    // Calculate movement input
-    moveInput.x = axes.x * speed * Time.deltaTime;
-    moveInput.y = axes.y * speed * Time.deltaTime;
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            animator.SetBool("isKicking", true);
+        }
+
+        if (Input.GetKeyUp(KeyCode.K))
+        {
+            animator.SetBool("isKicking", false);
+        }
+    }
+
+    void Axis_Listener(IInputAction<Vector2> i_value)
+    {
+        Vector2 axes = inputActions.GetAxisData().GetValue().Value;
+
+        // Debug.Log($"Axes: {axes}");
+
+        // Calculate movement input
+        moveInput.x = axes.x * speed * Time.deltaTime;
+        moveInput.y = axes.y * speed * Time.deltaTime;
 
         if (Mathf.Abs(axes.x) > inputThreshold || Mathf.Abs(axes.y) > inputThreshold)
         {
@@ -37,8 +62,7 @@ void Axis_Listener(IInputAction<Vector2> i_value)
         {
             animator.SetBool("isWalking", false);
         }
-}
-
+    }
 
     private void rotate(Vector3 i_movement)
     {

@@ -13,12 +13,20 @@ public class Mom : MonoBehaviour
     [SerializeField] private float meter_value = 0f;
     [SerializeField] private float aaway_distance_value = 10f; // Adjust according to your needs
     [SerializeField] public GameObject gameover_screen = null;
+    [SerializeField] GameOverScript gameover_script = null;
     // private bool gameover_flag = false;
 
 
     void Awake()
     {
         gameover_screen.SetActive(false);
+        GameObject gameOverObject = GameObject.FindGameObjectWithTag("game_over");
+        gameover_script = gameOverObject.GetComponent<GameOverScript>();
+
+        if (gameover_script == null)
+        {
+            Debug.Log("Gameover object is NULL");
+        }
     }
     // Start is called before the first frame update
     void Start()
@@ -43,8 +51,9 @@ public class Mom : MonoBehaviour
             if (distance > aaway_distance_value) // Adjust someThresholdValue according to your needs
             {
                 Debug.Log("Baby is far from initial position!");
-                gameover_screen.SetActive(true);
-                Time.timeScale = 0;
+                //gameover_screen.SetActive(true);
+                gameover_script.Gameover();
+                //Time.timeScale = 0;
             }
         }
     }

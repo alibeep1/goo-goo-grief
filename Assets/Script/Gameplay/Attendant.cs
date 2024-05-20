@@ -14,6 +14,7 @@ public class Attendant : MonoBehaviour
     [SerializeField] public float spawnInterval = 30f; // Interval between enemy spawns
     [SerializeField] public float moveSpeed = 5f; // Speed at which enemies move
     [SerializeField] public float despawnY = -80f; // Y position at which enemies despawn
+    [SerializeField] GameOverScript gameOver;
 
     private Animator animator;
 
@@ -22,16 +23,8 @@ public class Attendant : MonoBehaviour
         // Start spawning enemies
         animator = GetComponent<Animator>();
         StartCoroutine(SpawnEnemies());
-        animator.SetBool("isWalking", true); // Always start walking
-        // prefabScript = GetComponent<AttandantPrefabScript>();
-        // Debug.Log("Flag value from prefab: " + prefabScript.FlightAttandantCollision);
+        animator.SetBool("isWalking", true);
     }
-
-    // private void Update ()
-    // {
-    //     prefabScript = GetComponent<AttandantPrefabScript>();
-    //     Debug.Log("Flag value from prefab: " + prefabScript.FlightAttandantCollision);
-    // }
 
     IEnumerator SpawnEnemies()
     {
@@ -61,21 +54,23 @@ public class Attendant : MonoBehaviour
         // Destroy enemy when it reaches despawnY
         Destroy(enemy);
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        // Check if the collided object is the baby prefab
-        if (collision.gameObject == babyPrefab)
-        {
-            Debug.Log("Enemy collided with the baby!");
-            // End the game
-            GameOver();
-        }
-    }
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    Debug.Log("Collided with babyyyyyyyy");
+    //    // Check if the collided object is the baby prefab
+    //    if (collision.gameObject == babyPrefab)
+    //    {
+    //        Debug.Log("ATTENDANT -> Enemy collided with the baby!");
+    //        // End the game
+    //        // GameOver();
+    //        gameOver.Gameover();
+    //    }
+    //}
 
-    private void GameOver()
-    {
-        // Implement game over logic here
-        Debug.Log("Game Over");
-        // For example, you can display a game over screen, stop the game, etc.
-    }
+    //private void GameOver()
+    //{
+    //    // Implement game over logic here
+    //    Debug.Log("Game Over");
+    //    // For example, you can display a game over screen, stop the game, etc.
+    //}
 }

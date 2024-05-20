@@ -7,8 +7,10 @@ public class PeeMechanism : MonoBehaviour
 
     [SerializeField] InputActionManager inputActions = null;
     [SerializeField] float pee_distance = 20f;
+    [SerializeField] float secondsAlive = 3f;
 
     [SerializeField] GameObject missilePrefab = null;
+
     [SerializeField] float missileSpeed = 0.7f;
     [SerializeField] ProgressBar prog = null;
 
@@ -19,7 +21,7 @@ public class PeeMechanism : MonoBehaviour
             inputActions.RegisterToButtonEvents(Button_listener);
         }
     }
-   void Button_listener(IInputAction<bool> i_value, KeyCode i_keyCode)
+    void Button_listener(IInputAction<bool> i_value, KeyCode i_keyCode)
     {
         if (i_keyCode == KeyCode.P)
         {
@@ -44,8 +46,29 @@ public class PeeMechanism : MonoBehaviour
         {
             // Launch the Pee object as a missile in the direction of the baby's rotation and the given speed
             missile.AddForce(direction * missileSpeed, ForceMode2D.Impulse);
+            StartCoroutine(DestroyAfterDistance(missileObject, secondsAlive));
         }
-        //prog.IncProgressBar(0.05f);
 
+
+
+    }
+    IEnumerator DestroyAfterDistance(GameObject missileObject, float secondsAlive)
+    {
+        // Calculate the time it takes for the missile to travel the maximum distance
+        // Stop the missile's motion
+        Rigidbody2D missile = missileObject.GetComponent<Rigidbody2D>();
+
+        float travelTime = pee_distance / missileSpeed;
+
+        // Wait for the travel time
+        yield return new WaitForSeconds(travelTime);
+        if (missile != null)
+        {
+            missile.velocity = Vector2.zero;
+        }
+        
+        yield return new WaitForSeconds(secondsAlive);
+        // Destroy the missile
+        Destroy(missileObject);
     }
 }

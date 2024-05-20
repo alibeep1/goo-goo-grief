@@ -21,7 +21,7 @@ void Axis_Listener(IInputAction<Vector2> i_value)
 {
     Vector2 axes = inputActions.GetAxisData().GetValue().Value;
 
-    Debug.Log($"Axes: {axes}");
+    //Debug.Log($"Axes: {axes}");
 
     // Calculate movement input
     moveInput.x = axes.x * speed * Time.deltaTime;

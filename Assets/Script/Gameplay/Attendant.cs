@@ -15,10 +15,14 @@ public class Attendant : MonoBehaviour
     [SerializeField] public float moveSpeed = 5f; // Speed at which enemies move
     [SerializeField] public float despawnY = -80f; // Y position at which enemies despawn
 
+    private Animator animator;
+
     private void Start()
     {
         // Start spawning enemies
+        animator = GetComponent<Animator>();
         StartCoroutine(SpawnEnemies());
+        animator.SetBool("isWalking", true); // Always start walking
         // prefabScript = GetComponent<AttandantPrefabScript>();
         // Debug.Log("Flag value from prefab: " + prefabScript.FlightAttandantCollision);
     }

@@ -10,9 +10,16 @@ public class GridManager : MonoBehaviour
     [SerializeField] int x_space, y_space;
     [SerializeField] int columns_left, columns_right = 1;
 
+    //[SerializeField] List<Sprite> occupied_sprites = null;
+
     [SerializeField] GameObject mom_seat_prefab = null;
     [SerializeField] GameObject empty_seat_prefab = null;
     [SerializeField] GameObject occupied_seat_prefab = null;
+    [SerializeField] GameObject aisle_handles = null;
+
+    [SerializeField] GameObject window_prefab = null;
+    [SerializeField] GameObject seatbelt_prefab = null;
+
 
     [SerializeField] int empty_to_occupied_ratio = 2;
     [SerializeField] int babyOffset = -14;
@@ -20,28 +27,60 @@ public class GridManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        //  QUESTION: in the very near future, how would we link the instantiated occupied with a passenger entity (annoyance, etc., interactions, or scripts, more generall)
         if (empty_seat_prefab != null)
         {
             for (int i = 0; i < numOfRows; i++)
             {
                 for (int j = 0; j < numOfColumns; j++)
                 {
-                    if ((j < columns_left || j >= numOfColumns - columns_right) && i != 4)
+
+                    // Check if the current column is a window column
+                    if (j == 0 || j == numOfColumns - 1)
                     {
-                        if(i == 0 && j == 0)
+                        //Debug.Log("WINDOWS");
+                        Instantiate(window_prefab, new Vector3((x_space * j) + babyOffset, (y_space * i)), Quaternion.identity);
+                        continue;
+                    }
+                    // Check if the current column is part of the aisle
+                    if (j == columns_left || j == numOfColumns - columns_right - 1)
+                    {
+                        if (i == numOfRows - 1 || i % numOfRows == 2)
+                        {
+                            Instantiate(seatbelt_prefab, new Vector3((x_space * j) + babyOffset, (y_space * i)), Quaternion.identity);
+
+                            Instantiate(aisle_handles, new Vector3(((x_space * j) - 1.5f) + babyOffset, (y_space * i)), Quaternion.identity);
+                            Instantiate(aisle_handles, new Vector3(((x_space * j) + 1.5f) + babyOffset, (y_space * i)), Quaternion.identity);
+
+                        }
+                        continue; // Skip this iteration, leaving the aisle empty
+                    }
+
+                    // Check if the current column is part of the left, middle or right sections
+                    bool isLeft = j < columns_left;
+                    bool isRight = j >= numOfColumns - columns_right;
+                    bool isMiddle = !isLeft && !isRight;
+
+                    // Only instantiate seats in the left, middle and right sections
+                    if (isLeft || isMiddle || isRight)
+                    {
+                        if (i == 0 && j == 1)
                         {
                             Instantiate(mom_seat_prefab, new Vector3((x_space * j) + babyOffset, (y_space * i)), Quaternion.identity);
-                        } else{
+                        }
+                        else if (i == numOfRows - 1)
+                        {
+                            continue;
+                        }
+                        else
+                        {
                             InstantiateSeat(j, i);
                         }
                     }
-
                 }
             }
         }
     }
+
 
     private void InstantiateSeat(int column, int row)
     {

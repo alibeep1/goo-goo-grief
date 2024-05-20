@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -61,6 +62,7 @@ public class FartMechanism : MonoBehaviour
         var dur = particlesystem.duration;
         em.enabled = true;
         //prog.IncProgressBar(0.05f);
+        Debug.Log($"Farted at {DateTime.Now}");
         particlesystem.Play();
         StartCoroutine(BabyFartDuration(1.0f));
     }

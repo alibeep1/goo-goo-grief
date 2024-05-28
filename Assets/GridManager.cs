@@ -89,7 +89,7 @@ public class GridManager : MonoBehaviour
         int rand = Random.Range(1, empty_to_occupied_ratio + 1);
 
         // If the random number is 1, instantiate an occupied seat, otherwise instantiate an empty seat
-        GameObject seatToInstantiate = (rand == 1) ? occupied_seat_prefab : empty_seat_prefab;
+        GameObject seatToInstantiate = (rand == 1) ? empty_seat_prefab: occupied_seat_prefab;
 
         if(rand == 1)
         {

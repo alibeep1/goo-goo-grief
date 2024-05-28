@@ -6052,7 +6052,7 @@ MonoBehaviour:
   flight_attendant: {fileID: 0}
   window_prefab: {fileID: 7687664556983475250, guid: b40e9aa973f871a4f851d2bc178c76bc, type: 3}
   seatbelt_prefab: {fileID: 3300688895831739095, guid: 679c0f4bbca935648b060efcda7277c4, type: 3}
-  empty_to_occupied_ratio: 2
+  empty_to_occupied_ratio: 6
   babyOffset: -12
 --- !u!4 &672226874
 Transform:

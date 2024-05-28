@@ -10,7 +10,8 @@ public class GridManager : MonoBehaviour
     [SerializeField] int x_space, y_space;
     [SerializeField] int columns_left, columns_right = 1;
 
-    //[SerializeField] List<Sprite> occupied_sprites = null;
+    [SerializeField] List<Sprite> occupied_sprites = null;
+    private int sprite_ctr = 0;
 
     [SerializeField] GameObject mom_seat_prefab = null;
     [SerializeField] GameObject empty_seat_prefab = null;
@@ -47,7 +48,7 @@ public class GridManager : MonoBehaviour
                     {
                         if (i == numOfRows - 1 || i % numOfRows == 2)
                         {
-                            Instantiate(seatbelt_prefab, new Vector3((x_space * j) + babyOffset, (y_space * i)), Quaternion.identity);
+                            //Instantiate(seatbelt_prefab, new Vector3((x_space * j) + babyOffset, (y_space * i)), Quaternion.identity);
 
                             Instantiate(aisle_handles, new Vector3(((x_space * j) - 1.5f) + babyOffset, (y_space * i)), Quaternion.identity);
                             Instantiate(aisle_handles, new Vector3(((x_space * j) + 1.5f) + babyOffset, (y_space * i)), Quaternion.identity);
@@ -90,6 +91,11 @@ public class GridManager : MonoBehaviour
         // If the random number is 1, instantiate an occupied seat, otherwise instantiate an empty seat
         GameObject seatToInstantiate = (rand == 1) ? occupied_seat_prefab : empty_seat_prefab;
 
+        if(rand == 1)
+        {
+            // change seatToInstantiate's spriteRenderer
+            SpriteRenderer sprite = seatToInstantiate.GetComponent<SpriteRenderer>();
+        }
         // the -14 below changes with the setup of the above variables;
         // It is defined for this combo: 8,10, Baby(Transform), 4,5,3,3, seat_empty (prefab)
         Instantiate(seatToInstantiate, new Vector3((x_space * column) + babyOffset, (y_space * row)), Quaternion.identity);

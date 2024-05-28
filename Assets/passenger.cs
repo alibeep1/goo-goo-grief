@@ -11,6 +11,7 @@ public class passenger : MonoBehaviour
     [SerializeField] float Inc = 0.01f;
     [SerializeField] ProgressBar prog;
     [SerializeField] GameObject exclamationMark = null;
+    
     private CryMechanism cry;
     private KickMechanism kick;
     private bool isPlayerInTrigger = false;
@@ -19,6 +20,7 @@ public class passenger : MonoBehaviour
     private bool alreadyBothered = false;
     void Start()
     {
+        
         GameObject progressBarObject = GameObject.FindGameObjectWithTag("progress_bar");
         if (progressBarObject != null)
         {

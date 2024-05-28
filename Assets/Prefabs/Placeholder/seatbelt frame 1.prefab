@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5915733068178689072}
   - component: {fileID: 3241047593095447271}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: seatbelt frame 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

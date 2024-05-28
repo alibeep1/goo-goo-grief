@@ -66,7 +66,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   annoyance_ceil: 10
   curr_annoyance: 1
-  fart_inc: 0.01
+  Inc: 0.01
   prog: {fileID: 0}
   exclamationMark: {fileID: 2465638446750325066}
 --- !u!1 &2465638446750325066
@@ -163,6 +163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3744817786282866131}
   - component: {fileID: 4663410368524985433}
+  - component: {fileID: 9170794195989467798}
   m_Layer: 8
   m_Name: visualObject
   m_TagString: Untagged
@@ -237,6 +238,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9170794195989467798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3784784624565564083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b708c7c2849f24bba2a1a3280d2f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 4663410368524985433}
+  sprites:
+  - {fileID: 21300000, guid: 3407e9c708d049b4da77dad37c4ecd28, type: 3}
+  - {fileID: 21300000, guid: 0e0815d2c433011488306775ddd85206, type: 3}
+  - {fileID: 21300000, guid: c19d265286d7efc4aadd60b37880639a, type: 3}
+  - {fileID: 21300000, guid: d2fcea58eeaa06c4b9441faab1a69fa7, type: 3}
+  - {fileID: 21300000, guid: b0850d359e262264886460587c5a71c5, type: 3}
+  - {fileID: 21300000, guid: ce9e58034f56a41479ceda6fc13a9c7c, type: 3}
+  - {fileID: 21300000, guid: 41f1737a0a7f0444881de84845ca91a4, type: 3}
+  - {fileID: 21300000, guid: 36cb904780cf89640956f7d68000a4ba, type: 3}
 --- !u!1 &6650312741855798290
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,7 +355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   annoyance_ceil: 10
   curr_annoyance: 1
-  fart_inc: 0.01
+  Inc: 0.01
   prog: {fileID: 0}
   exclamationMark: {fileID: 2465638446750325066}
 --- !u!1 &8683917227736974211
@@ -381,7 +404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   annoyance_ceil: 10
   curr_annoyance: 1
-  fart_inc: 0.01
+  Inc: 0.01
   prog: {fileID: 0}
   exclamationMark: {fileID: 0}
 --- !u!1 &8830878542406339412
@@ -469,6 +492,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   annoyance_ceil: 10
   curr_annoyance: 1
-  fart_inc: 0.01
+  Inc: 0.01
   prog: {fileID: 0}
   exclamationMark: {fileID: 2465638446750325066}

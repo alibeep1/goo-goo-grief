@@ -22,6 +22,11 @@ public class PlayGame : MonoBehaviour
             //originalPitch = bgMusic.pitch;
         }
     }
+    public void ExitApp()
+    {
+        Debug.Log("Credits Handler called");
+        Application.Quit();
+    }
     public void StartGame()
     {
         SceneManager.LoadScene("SampleScene");

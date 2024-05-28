@@ -95,6 +95,6 @@ public class Attendant : MonoBehaviour
     //{
     //    // Implement game over logic here
     //    Debug.Log("Game Over");
-    //    // For example, you can display a game over screen, stop the game, etc.
-    //}
+    //    // For example, you can display a game over screen, stop the game,ï¿½etc.
+    //}
 }

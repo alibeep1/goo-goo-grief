@@ -38,7 +38,6 @@ public class Mom : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Debug.Log(meter_value);
         // Check if the mommeter reaches 1
         if (meter_value == 1)
         {

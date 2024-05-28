@@ -175,6 +175,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70bdd253af3e64458c76605f9bdea44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 0}
+  bgMusic: {fileID: 0}
+  helpMenu: {fileID: 0}
 --- !u!114 &140825674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,7 +224,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 140825673}
         m_TargetAssemblyTypeName: PlayGame, Assembly-CSharp
-        m_MethodName: Play
+        m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

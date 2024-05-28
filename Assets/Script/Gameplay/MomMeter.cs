@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MomMeter : MonoBehaviour
 {
     [SerializeField] private Slider slider;
-    [SerializeField] private float fillSpeed = 0.0001f;
+    [SerializeField] private float fillSpeed = 0.1f;
 
     // Define a delegate type for broadcasting the fill percentage
     public delegate void FillPercentageDelegate(float fillPercentage);
@@ -24,7 +24,7 @@ public class MomMeter : MonoBehaviour
     {
         if (slider.value < 1f)
         {
-            slider.value = slider.value + fillSpeed;
+            slider.value = slider.value + fillSpeed * Time.deltaTime;
 
             // Broadcast the fill percentage when it changes
             OnFillPercentageChanged?.Invoke(slider.value);
@@ -37,5 +37,23 @@ public class MomMeter : MonoBehaviour
             OnFillPercentageChanged?.Invoke(slider.value);
         }
     }
+
+    //void Update()
+    //{
+    //    if (slider.value < 1f)
+    //    {
+    //        slider.value = slider.value + fillSpeed;
+
+    //        // Broadcast the fill percentage when it changes
+    //        OnFillPercentageChanged?.Invoke(slider.value);
+    //    }
+    //    else
+    //    {
+    //        slider.value = 0f;
+
+    //        // Broadcast the fill percentage when it changes
+    //        OnFillPercentageChanged?.Invoke(slider.value);
+    //    }
+    //}
 }
 
